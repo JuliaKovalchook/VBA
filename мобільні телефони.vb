@@ -127,7 +127,7 @@ Sub clean_phone()
             ActiveSheet.Rows(i).Delete
         ElseIf Len(Cells(i, new_colum)) = 10 And Left(Cells(i, new_colum), 1) <> "0" Then 'код України "380", тому якщо номер має 10 чисел, то він повинен починатися на цифри "0", в іншому випадку видаляємо рядок. Оскільки після видаленя не числових символів номери відображаються в числовому форматі, то значень із 10 символами взагалі не повинно існувати
          ActiveSheet.Rows(i).Delete
-        ElseIf Len(Cells(i, new_colum)) = 9 And Left(Cells(i, new_colum), 1) = "0" Then 'номер оператора не може починатися на 9, тому, якщо це так, то видаляємо цей рядок
+        ElseIf Len(Cells(i, new_colum)) = 9 And Left(Cells(i, new_colum), 1) = "0" Then 'номер оператора не може починатися на 0, тому, якщо це так, то видаляємо цей рядок
             ActiveSheet.Rows(i).Delete
         End If
     Next
